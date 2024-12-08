@@ -1,0 +1,191 @@
+/* 기본 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body 스타일 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+}
+
+/* 첫 번째 섹션 */
+.centered-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 첫 번째 제목 스타일 */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #000;
+  line-height: 1.5;
+}
+
+.title span {
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #555;
+}
+
+/* 두 번째 섹션 */
+.image-cards {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* 카드 레이아웃 */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4개의 카드가 가로로 배치 */
+  gap: 20px;
+}
+
+.card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  margin: 5px 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr); /* 2개의 카드가 가로로 배치 */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr; /* 1개의 카드가 가로로 배치 */
+  }
+}
+
+/* Trends News 섹션 */
+.trend-section {
+  padding: 150px 50px;
+  border-top: 1px solid #ddd; /* 구분선 */
+  margin-top: 80px; /* 이전 섹션과 간격 조정 */
+  width: 415%;
+  position: relative; /* 내부 요소 배치 기준 */
+  margin: 100;
+}
+
+/* 구분선 위에 "Trend" 텍스트 */
+.trend-label {
+  position: absolute;
+  top: -40px; /* 구분선 위로 이동 */
+  left: 5px; /* 왼쪽 여백 */
+  font-size: 1.2rem;
+  font-weight: medium;
+  color: #000;
+  background: #fff;
+  padding: 0 10px; /* 배경 흰색으로 깔끔한 박스 형태 */
+}
+
+/* 햄버거 메뉴 스타일 */
+.trend-menu {
+  position: absolute;
+  top: -40px; /* 구분선과 위치 조정 */
+  right: 10px; /* 오른쪽 여백 */
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* 각 선 사이 간격 */
+}
+
+.trend-menu div {
+  width: 30px; /* 선 길이 */
+  height: 1px; /* 선 두께 */
+  background-color: #000; /* 선 색상 */
+}
+
+/* Trends News 제목 */
+.trend-title {
+  font-size: 7rem; /* 제목 폰트 크기 조정 */
+  font-weight: bold;
+  position: relative;
+  color: #000;
+  line-height: 1;
+  margin-left: -900px; /* 왼쪽으로 약간 이동 */
+}
+
+/* 설명 글 */
+.trend-description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  max-width: 400px;
+  line-height: 1.8; /* 줄 간격 */
+  text-align: left;
+  margin-left: 0px; /* 설명 글을 왼쪽으로 살짝 이동 */
+  margin-top: -10px; /* 제목과 설명 사이 간격 줄임 */
+}
+
+/* 이미지 */
+.trend-image img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 8px;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+  .trend-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .trend-description {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
